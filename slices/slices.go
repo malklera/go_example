@@ -5,6 +5,11 @@ import (
 	"slices"
 )
 
+// this is the syntax to specify that you receive a slice
+func sum(nums []int) {
+	fmt.Println(nums)
+}
+
 func main() {
 
 	var s []string
@@ -57,4 +62,8 @@ func main() {
 	}
 
 	fmt.Println("2d: ", twoD)
+
+	slice1 := []int{1, 2, 3, 4}
+
+	sum(slice1)
 }

@@ -18,4 +18,6 @@ func main() {
 
 	f := "apple"
 	fmt.Println(f)
+
+	fmt.Println(f + "pie")
 }
