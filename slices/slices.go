@@ -53,7 +53,7 @@ func main() {
 
 	twoD := make([][]int, 3)
 
-	for i := 0; i < 3; i++ {
+	for i := range(3) {
 		innerLen := i + 1
 		twoD[i] = make([]int, innerLen)
 		for j := 0; j < innerLen; j++ {
@@ -66,4 +66,21 @@ func main() {
 	slice1 := []int{1, 2, 3, 4}
 
 	sum(slice1)
+
+	testSlice := []string{"a", "b", "c", "d"}
+
+	fmt.Println("testSlice[0]:", testSlice[0])
+	fmt.Println("testSlice[len(testSlice)-1]:", testSlice[len(testSlice)-1])
+	// the following panic index out of range
+	// fmt.Println("testSlice[len(testSlice)]:", testSlice[len(testSlice)])
+
+	var testAppend []string
+	fmt.Println("\n\ntestAppend:", testAppend)
+	testAppend = append(testAppend, "a")
+	fmt.Println("testAppend = append(testAppend, a):", testAppend)
+
+	secondSlice := []string{"b", "c", "d"}
+	fmt.Println("secondSlice:", secondSlice)
+	testAppend = append(testAppend, secondSlice...)
+	fmt.Println("testAppend = append(testAppend, secondSlice...)", testAppend)
 }

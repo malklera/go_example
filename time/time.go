@@ -9,7 +9,13 @@ func main() {
 	p := fmt.Println
 
 	now := time.Now()
-	p(now)
+	p("time.Now():", now)
+	p(".Now().Format(DateOnly):", now.Format(time.DateOnly))
+
+	year, month, day := now.Date()
+	p("year:", year)
+	p("month:", month)
+	p("day:", day)
 
 	then := time.Date(2009, 11, 17, 20, 34, 58, 651387237, time.UTC)
 	p(then)
